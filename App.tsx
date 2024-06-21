@@ -70,7 +70,8 @@ function App(): React.JSX.Element {
       />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
+        style={backgroundStyle}
+        stickyHeaderIndices={[0]}>
         <Header />
         <View
           style={{
