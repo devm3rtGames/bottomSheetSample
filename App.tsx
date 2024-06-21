@@ -71,13 +71,29 @@ function App(): React.JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}
-        stickyHeaderIndices={[0]}>
+        stickyHeaderIndices={[0]}
+        snapToOffsets={[0, 220]}
+        snapToEnd={false}>
         <Header />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
             zIndex: 11,
+            borderTopLeftRadius: 32,
+            borderTopRightRadius: 32,
           }}>
+          <View
+            style={{
+              width: 50,
+              borderRadius: 6,
+              height: 5,
+              backgroundColor: 'gray',
+              opacity: 0.5,
+              marginTop: 20,
+              alignSelf: 'center',
+            }}
+          />
+
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
